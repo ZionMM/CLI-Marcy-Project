@@ -1,12 +1,55 @@
-# CLI App
+# Rock, Paper, Scissors CLI 
 
-**The project brief is in [PROJECT.md](./PROJECT.md).** Start there.
+A command-line Rock, Paper, Scissors game where you play against the computer.
+The game keeps score across rounds until you choose to quit, then shows your
+final statistics.
 
-This file is yours to write. When your project works, replace everything here
-with a description of what you built: what it does, how to run it, and a usage
-example. Write it for someone who has never seen your project before.
+## Features 
+- Type your move in any case ("rock", "ROCK", and "Rock" all work)
+- View your wins, losses, ties, and win rate
+- Invalid menu choices and moves show a message instead of crashing
 
-For an example of what a finished one looks like, see the
-[Task Manager Case Study](https://github.com/The-Marcy-Lab-School/swe-casestudy-1-cli-task-manager),
-which is a working Python CLI app with investigation questions to work
-through.
+## How to Run
+
+You need Python 3 installed. From the project folder, run:
+
+```
+python3 src/main.py
+```
+
+## Usage Example
+
+```
+Welcome to Rock, Paper, Scissors!
+
+Menu:
+1. Play Round
+2. View Stats
+3. Exit
+Choose an option (Enter 1-3): 1
+Choose a move (rock, paper, or scissors): rock
+
+You chose: rock
+Computer chose: scissors
+Rock beats scissors! You win!
+
+Menu:
+1. Play Round
+2. View Stats
+3. Exit
+Choose an Action (Enter 1-3): 2
+
+Current Statistics:
+Games Won: 1
+Games Lost: 0
+Games Tied: 0
+Total Games: 1
+Win Rate: 100%
+```
+
+## Project Structure
+
+- `src/main.py`: starts the app
+- `src/menu.py`: shows the menu and handles the player's choices
+- `src/game_data.py`: stores the score and contains the game rules
+- `src/test_game_data.py`: tests for the game rules
